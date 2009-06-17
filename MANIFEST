@@ -1,0 +1,18 @@
+Build.PL
+INSTALL
+lib/App/LexicalVarReplace.pm
+lib/App/LexicalVarReplace/Vim.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+samples/lexvarrepl.gif
+samples/test.pm
+script/vim_lexvarrepl
+t/00-new.t
+t/01-main.t
+xt/96-kwalitee.t
+xt/97-critic.t
+xt/98-pod.t
+xt/99-podcoverage.t
+xt/perlcriticrc

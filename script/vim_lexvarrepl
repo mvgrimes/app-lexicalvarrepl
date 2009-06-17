@@ -1,0 +1,25 @@
+#!/usr/bin/perl;
+
+use strict;
+use warnings;
+use App::LexicalVarReplace;
+
+use Getopt::Long;
+my $replacement = 'a_better_variable_name';
+my $column      = 1;
+my $line        = 1;
+GetOptions(
+    'col=i'  => \$column,
+    'line=i' => \$line,
+    'new=s'  => \$replacement,
+    'help'   => sub { pod2usage(1) },
+) or pod2usage(1);
+
+my $doc_as_str = join( "", <STDIN> );
+
+print App::LexicalVarReplace->new( code => $doc_as_str )->replace_var(
+    column      => $column,
+    line        => $line,
+    replacement => $replacement,
+);
+
