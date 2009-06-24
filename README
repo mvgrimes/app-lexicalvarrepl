@@ -1,3 +1,7 @@
+**** This has been depreciated in favor of App::EditorTools ****
+
+
+
 NAME
     App::LexicalVarReplace - Lexically replace a variable name in Perl code
 
